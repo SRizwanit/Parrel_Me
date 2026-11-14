@@ -72,8 +72,6 @@
 
     .line 8
     .line 9
-    invoke-static {p2}, Ldbg/D;->i(Landroid/content/Context;)V
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 10
@@ -236,12 +234,6 @@
     .line 4
     .line 5
     .line 6
-    iget-object v1, p0, Lcom/excelliance/kxqp/util/kk$c;->b:Landroid/app/Activity;
-
-    const-string v2, "kkc.a() Exit/No-thanks clicked: dismiss only"
-
-    invoke-static {v1, v2}, Ldbg/D;->w(Landroid/content/Context;Ljava/lang/String;)V
-
     invoke-static {p1}, Lcom/excelliance/kxqp/util/c6;->f(Landroid/app/Dialog;)V
 
     .line 7
@@ -266,12 +258,6 @@
     .line 4
     .line 5
     .line 6
-    iget-object v0, p0, Lcom/excelliance/kxqp/util/kk$c;->b:Landroid/app/Activity;
-
-    const-string v1, "kkc.b() Update clicked"
-
-    invoke-static {v0, v1}, Ldbg/D;->w(Landroid/content/Context;Ljava/lang/String;)V
-
     iget-boolean v0, p0, Lcom/excelliance/kxqp/util/kk$c;->a:Z
 
     .line 7
@@ -299,10 +285,6 @@
     .line 18
     .line 19
     invoke-static {p1, v0, v1}, Lcom/excelliance/kxqp/util/kk;->r(Lcom/excelliance/kxqp/util/kk;Landroid/app/Activity;Ln5/a;)V
-
-    const-string v1, "kkc.b() kk.r() returned"
-
-    invoke-static {v0, v1}, Ldbg/D;->w(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 20
     .line 21
