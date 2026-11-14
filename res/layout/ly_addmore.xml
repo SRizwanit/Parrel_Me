@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingTop="3.0dip"
+    android:paddingBottom="3.0dip"
+    style="@style/ButtonBar"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="@dimen/text_size_main_app_name"
+        android:textColor="@color/primary_gray_color2"
+        android:gravity="center_horizontal"
+        android:id="@id/bt_addmore"
+        android:tag="bt_addmore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addmore"
+        android:drawablePadding="6.0dip" />
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@id/root"
+    android:background="@null"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:id="@id/item_icon_framelayout"
+        android:layout_width="55.0dip"
+        android:layout_height="55.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/item_app_icon"
+            android:padding="3.5dip"
+            android:clickable="false"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/item_front"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="0.0dip"
+            android:contentDescription="@null" />
+    </FrameLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@id/hint_point"
+            android:visibility="gone"
+            android:layout_width="6.0dip"
+            android:layout_height="6.0dip"
+            android:layout_marginRight="4.0dip" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/app_text_color_white"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:id="@id/item_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/da_app_name"
+            android:maxLines="1" />
+    </LinearLayout>
+</LinearLayout>

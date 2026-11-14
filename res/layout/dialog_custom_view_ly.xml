@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@id/ll_dialog"
+        android:background="@drawable/custom_dialog_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25.0dip"
+        android:layout_marginRight="25.0dip">
+        <FrameLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@id/fl_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="14.0dip"
+            android:layout_marginRight="16.0dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/ll_button"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="24.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginBottom="13.0dip">
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="@color/dialog_button_left_text_color"
+                android:gravity="center"
+                android:id="@id/tv_left"
+                android:background="@drawable/dialog_bt_left_selector"
+                android:visibility="visible"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginRight="6.0dip"
+                android:text="左"
+                android:layout_weight="1.0" />
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="@color/dialog_button_right_text_color"
+                android:gravity="center"
+                android:id="@id/tv_right"
+                android:background="@drawable/dialog_bt_right_selector"
+                android:visibility="visible"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginRight="6.0dip"
+                android:text="右"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

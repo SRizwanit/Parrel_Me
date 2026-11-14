@@ -1,0 +1,55 @@
+.class public final Lcom/smartdigimkt/x5/x;
+.super Lcom/smartdigimkt/x5/a0;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Lorg/xmlpull/v1/XmlPullParser;)V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Lcom/smartdigimkt/x5/a0;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    const-string v1, "creativeType"
+
+    .line 6
+    .line 7
+    invoke-interface {p1, v0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-static {p1}, Lcom/smartdigimkt/x5/a0;->a(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
+
+    .line 11
+    .line 12
+    .line 13
+    move-result-object p1
+
+    .line 14
+    iput-object p1, p0, Lcom/smartdigimkt/x5/x;->a:Ljava/lang/String;
+
+    .line 15
+    .line 16
+    return-void
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+.end method

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@color/user_center_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/titleView"
+        layout="@layout/layout_title_view" />
+    <ListView
+        android:id="@id/app_listview_app"
+        android:background="@color/security_lock_bg_color"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/blue_press"
+        android:divider="@null"
+        android:layout_below="@id/titleView"
+        android:overScrollMode="never" />
+    <include
+        android:id="@id/add_no_app_layout"
+        android:visibility="gone"
+        layout="@layout/layout_no_app" />
+</RelativeLayout>

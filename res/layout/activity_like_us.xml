@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/user_center_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/layout_title_view" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="8.0dip" />
+        <RelativeLayout
+            android:id="@id/rl_facebook"
+            android:background="@drawable/user_center_item_selector"
+            android:layout_width="fill_parent"
+            android:layout_height="41.0dip">
+            <View
+                android:background="@color/edit_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentTop="true" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/share_friend_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.0dip"
+                android:text="@string/facebook"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16.0dip" />
+            <View
+                android:background="@color/edit_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip" />
+        <RelativeLayout
+            android:id="@id/rl_youtube"
+            android:background="@drawable/user_center_item_selector"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="41.0dip">
+            <View
+                android:background="@color/edit_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentTop="true" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/share_friend_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.0dip"
+                android:text="@string/youtube"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16.0dip" />
+            <View
+                android:background="@color/edit_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

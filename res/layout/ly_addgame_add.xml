@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="#cc000000"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/rl_illstration"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.excelliance.kxqp.swipe.MyHoleGif
+            android:id="@id/hole_gif"
+            android:visibility="gone"
+            android:layout_width="@dimen/w_phole"
+            android:layout_height="@dimen/w_phole"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+        <ImageView
+            android:id="@id/btm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+        <ImageView
+            android:id="@id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btm"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="#ff777777"
+            android:gravity="center"
+            android:id="@id/tx_work"
+            android:background="#ffffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="60.0dip"
+            android:text="@string/adding"
+            android:layout_below="@id/btm"
+            android:layout_alignLeft="@id/btm"
+            android:layout_alignRight="@id/btm" />
+        <include
+            android:id="@id/ll_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btm"
+            android:layout_centerHorizontal="true"
+            layout="@layout/ly_addicon_item" />
+        <RelativeLayout
+            android:id="@id/rl_pdiff"
+            android:background="@null"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/addicon_t"
+            android:layout_above="@id/btm"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:id="@id/diffus_ovel1"
+                android:layout_width="@dimen/w_diff"
+                android:layout_height="@dimen/h_diff"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:id="@id/diffus_ovel2"
+                android:layout_width="@dimen/w_diff"
+                android:layout_height="@dimen/h_diff"
+                android:layout_centerHorizontal="true" />
+            <ImageView
+                android:id="@id/diffus_ovel3"
+                android:layout_width="@dimen/w_diff"
+                android:layout_height="@dimen/h_diff"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

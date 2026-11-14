@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:id="@id/ad_unit"
+    android:background="@android:color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:gravity="center"
+        android:id="@id/native_ad_media"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:contentDescription="image_desc" />
+    <Button
+        android:textSize="11.0sp"
+        android:textColor="#ffffffff"
+        android:id="@id/ad_but"
+        android:background="@drawable/dr_adv"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="4.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingBottom="4.0dip"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.0dip"
+        android:layout_marginRight="3.0dip"
+        android:text="@string/remove_ad"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

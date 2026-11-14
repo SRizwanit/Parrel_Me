@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/share_center_main_top"
+    android:background="@android:color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/lv_popup"
+        android:background="@color/user_item_normal_white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:textSize="18.0sp"
+            android:textColor="@color/secondary_gray_color"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/share_center_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:text="@string/share_to_multiple"
+            android:singleLine="true" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/ly_share_top"
+            android:paddingBottom="0.0dip"
+            android:descendantFocusability="beforeDescendants"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center"
+                android:id="@id/gv_share_center"
+                android:descendantFocusability="beforeDescendants"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="0.0dip"
+                android:verticalSpacing="0.0dip"
+                android:stretchMode="columnWidth"
+                android:numColumns="4" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

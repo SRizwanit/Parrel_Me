@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@drawable/list_item_selector_light"
+    android:paddingLeft="@dimen/set_icon_l"
+    android:paddingRight="@dimen/set_switch_r"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/set_item_h"
+    android:minHeight="@dimen/set_item_h"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/iv_app_ic"
+        android:layout_width="@dimen/set_icon_w"
+        android:layout_height="@dimen/set_icon_h" />
+    <TextView
+        android:textColor="@color/set_item_tx_c"
+        android:gravity="center_vertical"
+        android:id="@id/tx_label"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/set_icon_r"
+        android:text="Hello"
+        android:singleLine="true"
+        android:layout_weight="1.0" />
+    <ImageButton
+        android:id="@id/ib_switch"
+        android:background="@null"
+        android:visibility="gone"
+        android:layout_width="@dimen/set_switch_w"
+        android:layout_height="@dimen/set_switch_h" />
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/full_layout"
+    android:background="@color/priv_bg_color"
+    android:padding="0.0dip"
+    android:descendantFocusability="beforeDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/title"
+        layout="@layout/layout_title_view" />
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/rl_priv_no_apps"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@id/rl_priv_no_apps2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@id/priv_iv_no_apps"
+                android:background="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/add_game_app_color"
+                android:gravity="center"
+                android:id="@id/priv_tv_no_apps"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip"
+                android:text="@string/priv_no_apps" />
+            <Button
+                android:textSize="18.0sp"
+                android:textColor="@color/text_color_white"
+                android:id="@id/priv_bt_no_apps_add"
+                android:background="@color/priv_button_add_color"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="40.0dip"
+                android:layout_marginTop="16.0dip"
+                android:layout_marginRight="40.0dip"
+                android:text="@string/priv_add_to_sz" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.excelliance.kxqp.ui.MainScrollView
+        android:id="@id/priv_sv_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:id="@id/priv_ly_useapp"
+                    android:clickable="true"
+                    android:descendantFocusability="beforeDescendants"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <ImageView
+                        android:id="@id/priv_iv_grid_banner"
+                        android:background="@null"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentTop="true" />
+                    <View
+                        android:id="@id/priv_useapp_top_divider"
+                        android:layout_width="fill_parent"
+                        android:layout_height="4.0px"
+                        android:layout_below="@id/priv_iv_grid_banner" />
+                    <com.excelliance.kxqp.ui.MyGridView
+                        android:layout_gravity="center"
+                        android:id="@id/priv_gv_useapp"
+                        android:descendantFocusability="beforeDescendants"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:layout_below="@id/priv_useapp_top_divider" />
+                    <View
+                        android:id="@id/priv_useapp_bottom_divider"
+                        android:background="@color/list_divider_color"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginTop="@dimen/opened_bottom_divider_margin_top"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_below="@id/priv_gv_useapp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.excelliance.kxqp.ui.MainScrollView>
+</LinearLayout>

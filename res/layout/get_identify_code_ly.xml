@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@null"
+    android:layout_width="fill_parent"
+    android:layout_height="45.0dip"
+    android:layout_marginLeft="16.0dip"
+    android:layout_marginTop="14.0dip"
+    android:layout_marginRight="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText
+        android:textSize="16.0sp"
+        android:textColor="@color/feedback_tx_c"
+        android:textColorHint="@color/user_hint_color"
+        android:id="@id/et_input_identify_code"
+        android:background="@null"
+        android:paddingLeft="0.0dip"
+        android:paddingRight="0.0dip"
+        android:layout_width="160.0dip"
+        android:layout_height="40.0dip"
+        android:layout_marginLeft="0.0dip"
+        android:layout_marginRight="0.0dip"
+        android:hint="@string/input_indentify_code"
+        android:layout_centerVertical="true"
+        android:inputType="number"
+        android:imeOptions="actionGo" />
+    <ImageView
+        android:id="@id/iv_clear_code"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="210.0dip"
+        android:src="@drawable/btn_clear"
+        android:layout_alignLeft="@id/et_input_identify_code"
+        android:layout_alignTop="@id/et_input_identify_code"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/button_bg_nomal"
+        android:id="@id/tv_get_indentify_code"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16.0dip"
+        android:text="@string/user_get_indentify_code"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/get_indentify_code_color"
+        android:id="@id/tv_time_down"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16.0dip"
+        android:text="59s后重发"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+    <View
+        android:background="@color/button_bg_disable"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

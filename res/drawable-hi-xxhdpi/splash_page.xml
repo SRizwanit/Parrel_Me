@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/splash_page_bg" />
+    </item>
+    <item
+        android:gravity="bottom|center"
+        android:height="@dimen/dp_34.5"
+        android:width="@dimen/dp_301"
+        android:bottom="@dimen/dp_18">
+        <bitmap
+            android:gravity="fill"
+            android:src="@drawable/start_page_content"
+            android:antialias="true" />
+    </item>
+    <item
+        android:gravity="bottom|center"
+        android:height="@dimen/dp_56.5"
+        android:width="@dimen/dp_56.5"
+        android:bottom="@dimen/dp_69">
+        <bitmap
+            android:gravity="fill"
+            android:src="@drawable/start_page_app_icon"
+            android:antialias="true" />
+    </item>
+</layer-list>

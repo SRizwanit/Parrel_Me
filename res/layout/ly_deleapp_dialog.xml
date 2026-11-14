@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@id/ll_folder_dialog"
+    android:background="#99000000"
+    android:visibility="visible"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@id/ll_dialog"
+        android:background="#fffafafa"
+        android:paddingLeft="@dimen/folder_dialog_padding"
+        android:paddingRight="@dimen/folder_dialog_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/folder_dialog_margin_r"
+        android:layout_marginRight="@dimen/folder_dialog_margin_r"
+        android:paddingStart="20.0dip"
+        android:paddingEnd="20.0dip"
+        android:layout_marginStart="@dimen/folder_dialog_margin_r"
+        android:layout_marginEnd="@dimen/folder_dialog_margin_r">
+        <TextView
+            android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff333333"
+            android:gravity="center_vertical"
+            android:id="@id/tx_title"
+            android:layout_width="fill_parent"
+            android:layout_height="62.0dip"
+            android:text="@string/folder_dialog_title" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="#ff999999"
+            android:gravity="center"
+            android:id="@id/tx_message"
+            android:padding="0.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/folder_dialog_tx_margin_b"
+            android:text="@string/deleteapp_prompt" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/folder_dialog_btgroup_h">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textStyle="bold"
+                    android:textColor="#ff0090e0"
+                    android:gravity="center"
+                    android:id="@id/bt_cancel"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/folder_dialog_bt1_margin_r"
+                    android:text="@string/folder_dialog_cancel"
+                    android:layout_marginEnd="24.0dip" />
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textStyle="bold"
+                    android:textColor="#ff0090e0"
+                    android:gravity="center"
+                    android:id="@id/bt_sure"
+                    android:tag="sure"
+                    android:background="@null"
+                    android:padding="0.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="@string/dele" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+    android:interpolator="@anim/my_overshoot_interpolator"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale
+        android:duration="200"
+        android:pivotX="0.0%"
+        android:pivotY="100.0%"
+        android:fromXScale="100.0%"
+        android:toXScale="0.0%"
+        android:fromYScale="100.0%"
+        android:toYScale="0.0%" />
+</set>

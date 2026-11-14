@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/one_tap_page_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/one_tap_skip_text"
+        android:gravity="center"
+        android:id="@id/tvSkip"
+        android:background="@drawable/bg_btn_skip"
+        android:paddingLeft="13.0dip"
+        android:paddingRight="13.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_16"
+        android:text="@string/one_tap_clone_skip"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:paddingHorizontal="13.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="22.0sp"
+        android:textColor="@color/one_tap_title"
+        android:gravity="center"
+        android:id="@id/tvTitle"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.0dip"
+        android:text="@string/one_tap_clone_title"
+        android:paddingHorizontal="16.0dip"
+        app:layout_constraintTop_toBottomOf="@id/tvSkip" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/one_tap_desc"
+        android:gravity="center"
+        android:id="@id/tvDesc"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.0dip"
+        android:text="@string/one_tap_clone_desc"
+        android:paddingHorizontal="16.0dip"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    <TextView
+        android:textSize="17.0sp"
+        android:textColor="@color/tc_one_tap_clone_selector"
+        android:gravity="center"
+        android:id="@id/tvClone"
+        android:background="@drawable/bg_btn_one_tap_clone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_51"
+        android:layout_marginLeft="@dimen/dp_32"
+        android:layout_marginRight="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/dp_28"
+        android:text="@string/one_tap_clone_cta"
+        android:layout_marginHorizontal="@dimen/dp_32"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/rvApps"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:layout_marginVertical="16.0dip"
+        app:layout_constraintBottom_toTopOf="@id/tvClone"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc" />
+</androidx.constraintlayout.widget.ConstraintLayout>

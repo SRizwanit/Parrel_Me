@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@id/add_no_app_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@id/titleView"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/priv_iv_no_apps"
+        android:layout_width="110.0dip"
+        android:layout_height="110.0dip"
+        android:src="@drawable/ic_avatar_blank_app"
+        android:scaleType="fitCenter" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="#ff999999"
+        android:gravity="center"
+        android:id="@id/add_game_no_apk_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="@string/no_add_app" />
+</LinearLayout>

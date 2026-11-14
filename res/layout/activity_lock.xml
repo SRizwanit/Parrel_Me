@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/lock_RelativeLayout1"
+    android:background="@color/add_title_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/title"
+        layout="@layout/layout_title_view" />
+    <RelativeLayout
+        android:id="@id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lock_topll_top"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@id/iv_lock_app_img"
+            android:layout_width="@dimen/lock_img_size"
+            android:layout_height="@dimen/lock_img_size"
+            android:src="@drawable/lock_lock"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@id/middle_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lock_middle_top"
+        android:layout_below="@id/top_layout"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/textview_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lock_hint_tv" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/point_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21.0dip" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@id/bottom_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lock_borad_bottom"
+        android:layout_alignParentBottom="true">
+        <GridView
+            android:id="@id/gridview_num"
+            android:scrollbars="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/gridview_bottom"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/forget_text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="26.0dip"
+            android:text="@string/forget_pwd"
+            android:layout_below="@id/gridview_num"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

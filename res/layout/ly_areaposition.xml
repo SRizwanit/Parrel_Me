@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@id/ll_folder_dialog"
+    android:background="#99000000"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@id/ll_dialog"
+        android:background="#fffafafa"
+        android:paddingLeft="@dimen/folder_dialog_padding"
+        android:paddingRight="@dimen/folder_dialog_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/folder_dialog_margin_l"
+        android:layout_marginRight="@dimen/folder_dialog_margin_r">
+        <TextView
+            android:enabled="false"
+            android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff333333"
+            android:paddingLeft="0.0dip"
+            android:clickable="false"
+            android:layout_height="@dimen/faster_dialog_item_h"
+            android:text="@string/area_position"
+            style="@style/faster_radio" />
+        <RadioGroup
+            android:gravity="center"
+            android:paddingBottom="@dimen/dialog_padding_b"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@id/bottom_left"
+                android:tag="0"
+                android:text="@string/bottom_left"
+                style="@style/faster_radio" />
+            <RadioButton
+                android:id="@id/bottom_right"
+                android:tag="1"
+                android:text="@string/bottom_right"
+                style="@style/faster_radio" />
+            <RadioButton
+                android:id="@id/bottom_left_right"
+                android:tag="2"
+                android:text="@string/bottom_left_right"
+                style="@style/faster_radio" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

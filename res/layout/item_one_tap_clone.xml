@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="12.0dip"
+    android:paddingBottom="12.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/ivIcon"
+        android:background="@drawable/bg_one_tap_icon"
+        android:layout_width="@dimen/dp_59"
+        android:layout_height="@dimen/dp_59"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
+        android:clipToOutline="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <View
+        android:id="@id/vBorder"
+        android:background="@drawable/bg_one_tap_game"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+        app:layout_constraintEnd_toEndOf="@id/ivIcon"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="@id/ivIcon" />
+    <ImageView
+        android:id="@id/ivSelected"
+        android:visibility="gone"
+        android:layout_width="@dimen/dp_22"
+        android:layout_height="@dimen/dp_22"
+        android:layout_marginTop="@dimen/dp_1"
+        android:src="@drawable/ic_one_tap_selected"
+        android:contentDescription="@null"
+        android:layout_marginEnd="@dimen/dp_1"
+        app:layout_constraintEnd_toEndOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="@id/ivIcon" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/one_tap_app_name"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@id/tvName"
+        android:paddingLeft="2.0dip"
+        android:paddingRight="2.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.0dip"
+        android:maxLines="1"
+        android:paddingHorizontal="2.0dip"
+        app:layout_constraintTop_toBottomOf="@id/ivIcon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

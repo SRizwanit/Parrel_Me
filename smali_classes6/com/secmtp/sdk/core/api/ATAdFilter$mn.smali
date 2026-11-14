@@ -1,0 +1,33 @@
+.class interface abstract Lcom/secmtp/sdk/core/api/ATAdFilter$mn;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/secmtp/sdk/core/api/ATAdFilter;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x608
+    name = "mn"
+.end annotation
+
+
+# virtual methods
+.method public abstract filter(Ljava/util/Map;Lcom/secmtp/sdk/core/common/nn/nnu;)Landroid/util/Pair;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lcom/secmtp/sdk/core/common/nn/nnu;",
+            ")",
+            "Landroid/util/Pair<",
+            "Ljava/lang/Boolean;",
+            "Lcom/secmtp/sdk/core/api/AdError;",
+            ">;"
+        }
+    .end annotation
+.end method

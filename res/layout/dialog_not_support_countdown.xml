@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@id/rl_dialog"
+        android:background="@drawable/bg_dialog_pay_hint"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_14"
+        android:layout_width="@dimen/dp_290"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:textSize="@dimen/dp_16"
+            android:textStyle="bold"
+            android:textColor="#ff333333"
+            android:id="@id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notice_all_caps"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:textSize="@dimen/dp_12"
+            android:textColor="#ff333333"
+            android:id="@id/tv_content"
+            android:paddingLeft="@dimen/dp_25"
+            android:paddingRight="@dimen/dp_25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_22"
+            android:text="@string/dialog_not_support_countdown_content"
+            android:layout_below="@id/tv_title"
+            android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="34.0dip"
+            android:layout_marginTop="@dimen/dp_27"
+            android:layout_below="@id/tv_content"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="16.0dip"
+            android:paddingEnd="16.0dip">
+            <TextView
+                android:textSize="@dimen/dp_14"
+                android:textColor="#ff666666"
+                android:gravity="center"
+                android:id="@id/tv_cancel"
+                android:background="@drawable/bg_normal_cancel"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:text="@string/dialog_not_support_countdown_start_app"
+                android:layout_weight="1.0" />
+            <TextView
+                android:textSize="@dimen/dp_14"
+                android:textColor="#ffffffff"
+                android:gravity="center"
+                android:id="@id/tv_confirm"
+                android:background="@drawable/bg_normal_confirm"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:text="@string/dialog_not_support_countdown_close"
+                android:layout_weight="1.0"
+                android:layout_marginStart="10.0dip"
+                android:layout_toEndOf="@id/tv_cancel" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@id/iv_close"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_30"
+        android:src="@drawable/close_round"
+        android:layout_below="@id/rl_dialog"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

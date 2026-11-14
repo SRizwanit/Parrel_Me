@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:color="@color/one_tap_cta_text_enabled" />
+    <item
+        android:color="@color/one_tap_cta_text_disabled" />
+</selector>

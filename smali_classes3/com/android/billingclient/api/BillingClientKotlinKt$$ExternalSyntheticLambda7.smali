@@ -1,0 +1,99 @@
+.class public final synthetic Lcom/android/billingclient/api/BillingClientKotlinKt$$ExternalSyntheticLambda7;
+.super Ljava/lang/Object;
+.source "com.android.billingclient:billing-ktx@@8.3.0"
+
+# interfaces
+.implements Lcom/android/billingclient/api/AlternativeBillingOnlyAvailabilityListener;
+
+
+# instance fields
+.field public synthetic f$0:Lfi/x;
+    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public synthetic constructor <init>(Lfi/x;)V
+    .locals 0
+    .param p1    # Lfi/x;
+        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lcom/android/billingclient/api/BillingClientKotlinKt$$ExternalSyntheticLambda7;->f$0:Lfi/x;
+
+    .line 5
+    .line 6
+    return-void
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+.end method
+
+
+# virtual methods
+.method public final onAlternativeBillingOnlyAvailabilityResponse(Lcom/android/billingclient/api/BillingResult;)V
+    .locals 1
+    .param p1    # Lcom/android/billingclient/api/BillingResult;
+        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .end annotation
+    .end param
+
+    .line 1
+    iget-object v0, p0, Lcom/android/billingclient/api/BillingClientKotlinKt$$ExternalSyntheticLambda7;->f$0:Lfi/x;
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/android/billingclient/api/BillingClientKotlinKt;->f(Lfi/x;Lcom/android/billingclient/api/BillingResult;)V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+.end method

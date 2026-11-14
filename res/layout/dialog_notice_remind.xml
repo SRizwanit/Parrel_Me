@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:background="#ff000000"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.2" />
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:background="@drawable/custom_dialog_bg"
+        android:layout_width="272.0dip"
+        android:layout_height="160.0dip">
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:text="@string/notice" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/dialog_content"
+            android:id="@id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:text="即将到期"
+            android:layout_centerInParent="true" />
+        <ImageView
+            android:background="@color/myvip_line_inner"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_above="@id/ll_button" />
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:id="@id/ll_button"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/button_cancel"
+                android:gravity="center"
+                android:id="@id/tv_cancel"
+                android:background="@drawable/dialog_button_bg_selector"
+                android:padding="6.0dip"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:text="忽略"
+                android:layout_weight="1.0" />
+            <ImageView
+                android:background="@color/myvip_line_inner"
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/button_ok"
+                android:gravity="center"
+                android:id="@id/tv_sure"
+                android:background="@drawable/dialog_button_bg_selector"
+                android:padding="6.0dip"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:text="续费"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

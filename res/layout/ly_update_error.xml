@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:background="@color/add_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/add_title_height">
+        <ImageButton
+            android:id="@id/ib_back"
+            android:background="@android:color/transparent"
+            android:paddingLeft="@dimen/add_back_padding_left"
+            android:paddingRight="@dimen/add_back_padding_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:textSize="@dimen/add_list_title_text_size"
+            android:textColor="@color/text_color_white"
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_version_publish"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView
+        android:background="@drawable/network_error"
+        android:layout_width="101.0dip"
+        android:layout_height="119.0dip"
+        android:layout_marginLeft="129.0dip"
+        android:layout_marginTop="96.0dip"
+        android:layout_marginRight="130.0dip"
+        android:scaleType="fitCenter" />
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="#ff222222"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45.0dip"
+        android:layout_marginTop="32.0dip"
+        android:layout_marginRight="45.0dip"
+        android:text="@string/version_update_error"
+        android:layout_centerInParent="true" />
+</LinearLayout>

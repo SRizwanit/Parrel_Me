@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/banner_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/ad_media"
+        android:layout_width="fill_parent"
+        android:layout_height="180.0dip" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="#ffffffff"
+        android:background="#33000000"
+        android:padding="2.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ad_mark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/ad_option_view"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:layout_alignParentEnd="true" />
+    <RelativeLayout
+        android:id="@id/rl_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="#ffffffff"
+            android:id="@id/ad_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:paddingStart="5.0dip"
+            android:layout_toStartOf="@id/ad_call_to_action"
+            android:layout_alignParentStart="true" />
+        <Button
+            android:textSize="12.0sp"
+            android:textColor="#ff2dbcfd"
+            android:gravity="center"
+            android:id="@id/ad_call_to_action"
+            android:background="@drawable/bg_button_install"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5.0dip"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

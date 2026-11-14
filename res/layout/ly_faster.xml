@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/feedback_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/add_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/add_title_height">
+        <ImageButton
+            android:id="@id/ib_back"
+            android:background="@android:color/transparent"
+            android:paddingLeft="@dimen/add_back_padding_left"
+            android:paddingRight="@dimen/add_back_padding_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:textSize="@dimen/add_list_title_text_size"
+            android:textColor="@color/text_color_white"
+            android:id="@id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/faster" />
+    </LinearLayout>
+    <ListView
+        android:id="@id/lv_faster"
+        android:background="@color/about_border_c"
+        android:paddingTop="1.0px"
+        android:paddingBottom="1.0px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1.0px" />
+</LinearLayout>

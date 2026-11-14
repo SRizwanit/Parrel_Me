@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/pop_title_down"
+        android:background="@drawable/pop_title_down"
+        android:visibility="gone"
+        android:layout_width="22.0dip"
+        android:layout_height="11.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/rootView"
+        android:background="@drawable/pop_window_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pop_title_down"
+        android:layout_alignParentLeft="true">
+        <RelativeLayout
+            android:id="@id/item_pop_icon_relative"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip">
+            <ImageView
+                android:id="@id/item_pop_icon_img"
+                android:visibility="gone"
+                android:layout_marginLeft="16.0dip"
+                android:src="@drawable/pop_icon_add"
+                android:layout_marginStart="16.0dip"
+                style="@style/pop_window_img" />
+            <TextView
+                android:text="@string/pop_add_icon"
+                style="@style/pop_window_text_mjb" />
+            <ImageView
+                style="@style/pop_window_view_mjb" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@id/item_pop_move_relative"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip">
+            <ImageView
+                android:id="@id/item_pop_move_tv"
+                android:visibility="gone"
+                android:layout_marginLeft="16.0dip"
+                android:src="@drawable/pop_app_move"
+                android:layout_marginStart="16.0dip"
+                style="@style/pop_window_img" />
+            <TextView
+                android:text="@string/pop_move_icon"
+                style="@style/pop_window_text_mjb" />
+            <ImageView
+                style="@style/pop_window_view_mjb" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@id/item_pop_custom_relative"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip">
+            <ImageView
+                android:id="@id/item_pop_custom_tv"
+                android:visibility="gone"
+                android:layout_marginLeft="16.0dip"
+                android:src="@drawable/pop_app_custom"
+                android:layout_marginStart="16.0dip"
+                style="@style/pop_window_img" />
+            <TextView
+                android:id="@id/item_pop_custom_img"
+                android:text="@string/pop_custom_icon"
+                style="@style/pop_window_text_mjb" />
+            <ImageView
+                style="@style/pop_window_view_mjb" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@id/item_pop_delete_relative"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip">
+            <ImageView
+                android:id="@id/item_pop_delete_tv"
+                android:visibility="gone"
+                android:layout_marginLeft="16.0dip"
+                android:src="@drawable/pop_app_delete"
+                android:layout_marginStart="16.0dip"
+                style="@style/pop_window_img" />
+            <TextView
+                android:text="@string/pop_delete_app"
+                style="@style/pop_window_text_mjb" />
+            <ImageView
+                style="@style/pop_window_view_mjb" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@id/item_pop_repair_relative"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip">
+            <ImageView
+                android:id="@id/item_pop_repair_tv"
+                android:visibility="gone"
+                android:layout_marginLeft="16.0dip"
+                android:src="@drawable/pop_app_repair"
+                android:layout_marginStart="16.0dip"
+                style="@style/pop_window_img" />
+            <TextView
+                android:text="@string/pop_repair_app"
+                style="@style/pop_window_text_mjb" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@id/rl_item_pop_update"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip">
+            <ImageView
+                android:id="@id/item_item_pop_update"
+                android:visibility="gone"
+                android:layout_marginLeft="16.0dip"
+                android:src="@drawable/pop_app_update"
+                android:layout_marginStart="16.0dip"
+                style="@style/pop_window_img" />
+            <TextView
+                android:text="@string/pop_item_update"
+                style="@style/pop_window_text_mjb" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@id/pop_title_up"
+        android:background="@drawable/pop_title_up"
+        android:visibility="gone"
+        android:layout_width="22.0dip"
+        android:layout_height="11.0dip"
+        android:layout_below="@id/rootView"
+        android:layout_alignParentLeft="true" />
+</RelativeLayout>

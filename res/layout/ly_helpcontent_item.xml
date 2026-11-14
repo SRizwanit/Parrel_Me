@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:paddingLeft="@dimen/faq_item_margin_l"
+    android:paddingTop="@dimen/faq_item_margin_t"
+    android:paddingRight="@dimen/faq_item_margin_r"
+    android:paddingBottom="@dimen/faq_item_margin_b"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/ll_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="@dimen/faq_item_tx"
+            android:textColor="#ff333333"
+            android:gravity="center_vertical"
+            android:id="@id/tx_question"
+            android:background="@android:color/transparent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="1.板块无法升级？"
+            android:layout_weight="1.0" />
+        <ImageView
+            android:id="@id/iv_fold"
+            android:background="@null"
+            android:layout_width="@dimen/faq_item_arrow_w"
+            android:layout_height="@dimen/faq_item_arrow_h"
+            android:layout_marginLeft="@dimen/faq_item_margin_l" />
+    </LinearLayout>
+    <TextView
+        android:textSize="@dimen/faq_item_tx2"
+        android:textColor="#ff999999"
+        android:id="@id/tx_ask"
+        android:background="@android:color/transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginRight="28.0dip"
+        android:text="请检查手机可用空间" />
+</LinearLayout>

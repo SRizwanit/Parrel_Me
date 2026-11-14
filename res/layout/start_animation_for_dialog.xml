@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/all_view_relative"
+    android:background="@null"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/rippleView"
+        android:visibility="gone"
+        android:layout_width="10.0dip"
+        android:layout_height="10.0dip"
+        android:src="@drawable/bg_ripper_view"
+        android:layout_centerInParent="true" />
+    <ImageView
+        android:id="@id/gearView"
+        android:visibility="gone"
+        android:layout_width="90.0dip"
+        android:layout_height="90.0dip"
+        android:src="@anim/gear_round"
+        android:layout_centerInParent="true" />
+    <ImageView
+        android:id="@id/iconView"
+        android:visibility="gone"
+        android:layout_width="60.0dip"
+        android:layout_height="60.0dip"
+        android:layout_centerInParent="true" />
+    <ImageView
+        android:id="@id/icon_front"
+        android:visibility="gone"
+        android:layout_width="60.0dip"
+        android:layout_height="60.0dip"
+        android:src="@drawable/icon_front"
+        android:layout_centerInParent="true" />
+    <FrameLayout
+        android:id="@id/fl_ad_bottom"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

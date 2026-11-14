@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/feedback_bg"
+    android:descendantFocusability="beforeDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/add_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/add_title_height">
+        <ImageButton
+            android:id="@id/ib_back"
+            android:background="@android:color/transparent"
+            android:paddingLeft="@dimen/add_back_padding_left"
+            android:paddingRight="@dimen/add_back_padding_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:textSize="@dimen/add_list_title_text_size"
+            android:textColor="@color/text_color_white"
+            android:id="@id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="SET" />
+    </LinearLayout>
+    <TextView
+        android:textSize="@dimen/set_title_tx_size"
+        android:textColor="@color/set_title_tx"
+        android:gravity="center_vertical"
+        android:id="@id/title2"
+        android:background="@color/set_title_bg"
+        android:paddingLeft="@dimen/set_title_l"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/set_icon_h"
+        android:text="Tag txt" />
+    <ListView
+        android:id="@id/lv"
+        android:background="@color/set_line_between_c"
+        android:paddingTop="@dimen/set_line_between_h"
+        android:paddingBottom="@dimen/set_line_between_h"
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1.0px" />
+</LinearLayout>

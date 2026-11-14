@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginRight="12.0dip"
+        android:layout_marginBottom="8.0dip">
+        <ImageView
+            android:id="@id/iv_icon"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@drawable/com_tencent_mm_sc"
+            android:layout_centerVertical="true" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_icon"
+            android:layout_centerVertical="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="12.0sp"
+                    android:textColor="#ff24262b"
+                    android:id="@id/tv_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dip"
+                    android:text="空间"
+                    android:layout_centerInParent="true" />
+                <TextView
+                    android:textSize="12.0sp"
+                    android:textColor="#ff24262b"
+                    android:id="@id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dip"
+                    android:text=""
+                    android:layout_centerInParent="true" />
+            </LinearLayout>
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="#ff999999"
+                android:id="@id/tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginTop="6.0dip"
+                android:text=""
+                android:layout_centerInParent="true" />
+        </LinearLayout>
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="#ff4d83e5"
+            android:gravity="center"
+            android:id="@id/tv_data_move"
+            android:background="@drawable/bg_data_move"
+            android:layout_width="60.0dip"
+            android:layout_height="30.0dip"
+            android:text="@string/data_move"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <View
+        android:background="#ffe9edf5"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_alignParentBottom="true" />
+</LinearLayout>

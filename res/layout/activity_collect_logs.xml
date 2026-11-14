@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/user_center_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/title"
+        layout="@layout/layout_title_view" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="#ff333333"
+        android:gravity="center_horizontal"
+        android:id="@id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        android:text="@string/collect_logs_hint"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="20.0dip"
+        android:paddingEnd="20.0dip" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/bg_collect_log_function_text"
+        android:gravity="center"
+        android:id="@id/tv_turn_on"
+        android:background="@drawable/bg_collect_log_function_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="42.0dip"
+        android:layout_marginTop="32.0dip"
+        android:text="@string/collect_logs_turn_on"
+        android:layout_below="@id/tv_hint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30.0dip"
+        android:layout_marginEnd="30.0dip" />
+    <TextView
+        android:enabled="false"
+        android:textSize="16.0sp"
+        android:textColor="@color/bg_collect_log_function_text"
+        android:gravity="center"
+        android:id="@id/tv_off_and_upload"
+        android:background="@drawable/bg_collect_log_function_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="42.0dip"
+        android:layout_marginTop="20.0dip"
+        android:text="@string/collect_logs_off_and_upload"
+        android:layout_below="@id/tv_turn_on"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30.0dip"
+        android:layout_marginEnd="30.0dip" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="#ff4e7eea"
+        android:id="@id/tv_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31.0dip"
+        android:text="@string/collect_logs_help"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

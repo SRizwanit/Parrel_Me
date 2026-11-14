@@ -1,0 +1,41 @@
+.class public final Lcom/google/android/gms/internal/ads/zzlw;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@25.2.0"
+
+
+# instance fields
+.field public zza:Lcom/google/android/gms/internal/ads/zzug;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public zzb:Lcom/google/android/gms/internal/ads/zzv;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method

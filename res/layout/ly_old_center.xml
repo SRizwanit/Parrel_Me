@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/old_center"
+    android:background="@color/new_gridview_item_bg"
+    android:scrollbars="none"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:splitMotionEvents="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@id/first_relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@id/shadow_1"
+            android:background="@color/priv_main_color_bg"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/hint_main_height"
+            android:layout_alignParentTop="true" />
+        <com.excelliance.kxqp.ui.MyGridView
+            android:id="@id/gv_useapp"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/hat_main_img_margin"
+            android:numColumns="4"
+            android:layout_below="@id/shadow_1" />
+        <ImageView
+            android:id="@id/hat_1"
+            android:layout_width="@dimen/hat_main_img"
+            android:layout_height="@dimen/hat_main_img"
+            android:src="@drawable/hat"
+            android:layout_below="@id/shadow_1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/app_text_color_white"
+            android:id="@id/hat_tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3.0dip"
+            android:layout_marginTop="1.0dip"
+            android:text="1"
+            android:layout_below="@id/shadow_1"
+            android:layout_marginStart="3.0dip" />
+    </RelativeLayout>
+    <com.excelliance.kxqp.ui.multiple.GridviewContainerLayout
+        android:orientation="vertical"
+        android:id="@id/layout_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

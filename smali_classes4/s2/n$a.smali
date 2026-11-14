@@ -1,0 +1,667 @@
+.class public final Ls2/n$a;
+.super Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+.source "AddListAdapter.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Ls2/n;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x11
+    name = "a"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0012\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u0014\u0008\u0080\u0004\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005R\"\u0010\u000c\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0006\u0010\u0007\u001a\u0004\u0008\u0008\u0010\t\"\u0004\u0008\n\u0010\u000bR\"\u0010\u0010\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\r\u0010\u0007\u001a\u0004\u0008\u000e\u0010\t\"\u0004\u0008\u000f\u0010\u000bR\"\u0010\u0014\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0011\u0010\u0007\u001a\u0004\u0008\u0012\u0010\t\"\u0004\u0008\u0013\u0010\u000bR\"\u0010\u001c\u001a\u00020\u00158\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0016\u0010\u0017\u001a\u0004\u0008\u0018\u0010\u0019\"\u0004\u0008\u001a\u0010\u001bR\"\u0010 \u001a\u00020\u00158\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u001d\u0010\u0017\u001a\u0004\u0008\u001e\u0010\u0019\"\u0004\u0008\u001f\u0010\u001bR\"\u0010(\u001a\u00020!8\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\"\u0010#\u001a\u0004\u0008$\u0010%\"\u0004\u0008&\u0010\'R\"\u0010,\u001a\u00020\u00158\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008)\u0010\u0017\u001a\u0004\u0008*\u0010\u0019\"\u0004\u0008+\u0010\u001bR\"\u00100\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008-\u0010\u0007\u001a\u0004\u0008.\u0010\t\"\u0004\u0008/\u0010\u000bR\"\u00104\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e\u00a2\u0006\u0012\n\u0004\u00081\u0010\u0007\u001a\u0004\u00082\u0010\t\"\u0004\u00083\u0010\u000b\u00a8\u00065"
+    }
+    d2 = {
+        "Ls2/n$a;",
+        "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
+        "Landroid/view/View;",
+        "view",
+        "<init>",
+        "(Ls2/n;Landroid/view/View;)V",
+        "m",
+        "Landroid/view/View;",
+        "b",
+        "()Landroid/view/View;",
+        "setHeaderView",
+        "(Landroid/view/View;)V",
+        "headerView",
+        "n",
+        "c",
+        "setHeaderView2",
+        "headerView2",
+        "o",
+        "d",
+        "setItemLl",
+        "itemLl",
+        "Landroid/widget/TextView;",
+        "p",
+        "Landroid/widget/TextView;",
+        "h",
+        "()Landroid/widget/TextView;",
+        "setTvHeader",
+        "(Landroid/widget/TextView;)V",
+        "tvHeader",
+        "q",
+        "i",
+        "setTvHeader2",
+        "tvHeader2",
+        "Lcom/excelliance/kxqp/ui/view/RecycleImageView;",
+        "r",
+        "Lcom/excelliance/kxqp/ui/view/RecycleImageView;",
+        "e",
+        "()Lcom/excelliance/kxqp/ui/view/RecycleImageView;",
+        "setIv",
+        "(Lcom/excelliance/kxqp/ui/view/RecycleImageView;)V",
+        "iv",
+        "s",
+        "g",
+        "setTv",
+        "tv",
+        "t",
+        "getBtn",
+        "setBtn",
+        "btn",
+        "u",
+        "f",
+        "setListDivider",
+        "listDivider",
+        "main_jar_majiaUiRelease"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field private m:Landroid/view/View;
+
+.field private n:Landroid/view/View;
+
+.field private o:Landroid/view/View;
+
+.field private p:Landroid/widget/TextView;
+
+.field private q:Landroid/widget/TextView;
+
+.field private r:Lcom/excelliance/kxqp/ui/view/RecycleImageView;
+
+.field private s:Landroid/widget/TextView;
+
+.field private t:Landroid/view/View;
+
+.field private u:Landroid/view/View;
+
+.field final synthetic v:Ls2/n;
+
+
+# direct methods
+.method public constructor <init>(Ls2/n;Landroid/view/View;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/view/View;",
+            ")V"
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "view"
+
+    .line 2
+    .line 3
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/t;->j(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    iput-object p1, p0, Ls2/n$a;->v:Ls2/n;
+
+    .line 7
+    .line 8
+    invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
+
+    .line 9
+    .line 10
+    .line 11
+    sget v0, Lcom/excelliance/kxqp/top/R$id;->game_item_header_layout:I
+
+    .line 12
+    .line 13
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object v0
+
+    .line 17
+    const-string v1, "findViewById(...)"
+
+    .line 18
+    .line 19
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/t;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 20
+    .line 21
+    .line 22
+    iput-object v0, p0, Ls2/n$a;->m:Landroid/view/View;
+
+    .line 23
+    .line 24
+    sget v0, Lcom/excelliance/kxqp/top/R$id;->game_item_header2_layout:I
+
+    .line 25
+    .line 26
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    .line 27
+    .line 28
+    .line 29
+    move-result-object v0
+
+    .line 30
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/t;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 31
+    .line 32
+    .line 33
+    iput-object v0, p0, Ls2/n$a;->n:Landroid/view/View;
+
+    .line 34
+    .line 35
+    sget v0, Lcom/excelliance/kxqp/top/R$id;->game_item_ll:I
+
+    .line 36
+    .line 37
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    .line 38
+    .line 39
+    .line 40
+    move-result-object v0
+
+    .line 41
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/t;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 42
+    .line 43
+    .line 44
+    iput-object v0, p0, Ls2/n$a;->o:Landroid/view/View;
+
+    .line 45
+    .line 46
+    sget v0, Lcom/excelliance/kxqp/top/R$id;->game_item_header:I
+
+    .line 47
+    .line 48
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    .line 49
+    .line 50
+    .line 51
+    move-result-object v0
+
+    .line 52
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/t;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 53
+    .line 54
+    .line 55
+    check-cast v0, Landroid/widget/TextView;
+
+    .line 56
+    .line 57
+    iput-object v0, p0, Ls2/n$a;->p:Landroid/widget/TextView;
+
+    .line 58
+    .line 59
+    sget v0, Lcom/excelliance/kxqp/top/R$id;->game_item_header2:I
+
+    .line 60
+    .line 61
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    .line 62
+    .line 63
+    .line 64
+    move-result-object v0
+
+    .line 65
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/t;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 66
+    .line 67
+    .line 68
+    check-cast v0, Landroid/widget/TextView;
+
+    .line 69
+    .line 70
+    iput-object v0, p0, Ls2/n$a;->q:Landroid/widget/TextView;
+
+    .line 71
+    .line 72
+    sget v0, Lcom/excelliance/kxqp/top/R$id;->add_game_iv:I
+
+    .line 73
+    .line 74
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    .line 75
+    .line 76
+    .line 77
+    move-result-object v0
+
+    .line 78
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/t;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 79
+    .line 80
+    .line 81
+    check-cast v0, Lcom/excelliance/kxqp/ui/view/RecycleImageView;
+
+    .line 82
+    .line 83
+    iput-object v0, p0, Ls2/n$a;->r:Lcom/excelliance/kxqp/ui/view/RecycleImageView;
+
+    .line 84
+    .line 85
+    sget v0, Lcom/excelliance/kxqp/top/R$id;->add_game_tv:I
+
+    .line 86
+    .line 87
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    .line 88
+    .line 89
+    .line 90
+    move-result-object v0
+
+    .line 91
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/t;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 92
+    .line 93
+    .line 94
+    check-cast v0, Landroid/widget/TextView;
+
+    .line 95
+    .line 96
+    iput-object v0, p0, Ls2/n$a;->s:Landroid/widget/TextView;
+
+    .line 97
+    .line 98
+    sget v0, Lcom/excelliance/kxqp/top/R$id;->add_game_btn:I
+
+    .line 99
+    .line 100
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    .line 101
+    .line 102
+    .line 103
+    move-result-object v0
+
+    .line 104
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/t;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 105
+    .line 106
+    .line 107
+    iput-object v0, p0, Ls2/n$a;->t:Landroid/view/View;
+
+    .line 108
+    .line 109
+    sget v0, Lcom/excelliance/kxqp/top/R$id;->list_divider:I
+
+    .line 110
+    .line 111
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    .line 112
+    .line 113
+    .line 114
+    move-result-object p2
+
+    .line 115
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/t;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 116
+    .line 117
+    .line 118
+    iput-object p2, p0, Ls2/n$a;->u:Landroid/view/View;
+
+    .line 119
+    .line 120
+    iget-object p2, p0, Ls2/n$a;->o:Landroid/view/View;
+
+    .line 121
+    .line 122
+    sget v0, Lcom/excelliance/kxqp/top/R$drawable;->app_list_item_selector:I
+
+    .line 123
+    .line 124
+    invoke-virtual {p2, v0}, Landroid/view/View;->setBackgroundResource(I)V
+
+    .line 125
+    .line 126
+    .line 127
+    iget-object p2, p0, Ls2/n$a;->t:Landroid/view/View;
+
+    .line 128
+    .line 129
+    const/4 v0, 0x0
+
+    .line 130
+    invoke-virtual {p2, v0}, Landroid/view/View;->setClickable(Z)V
+
+    .line 131
+    .line 132
+    .line 133
+    iget-object p2, p0, Ls2/n$a;->t:Landroid/view/View;
+
+    .line 134
+    .line 135
+    instance-of v0, p2, Landroid/widget/ImageButton;
+
+    .line 136
+    .line 137
+    if-eqz v0, :cond_0
+
+    .line 138
+    .line 139
+    sget p1, Lcom/excelliance/kxqp/top/R$drawable;->button_add:I
+
+    .line 140
+    .line 141
+    invoke-virtual {p2, p1}, Landroid/view/View;->setBackgroundResource(I)V
+
+    .line 142
+    .line 143
+    .line 144
+    goto :goto_0
+
+    .line 145
+    :cond_0
+    instance-of v0, p2, Landroid/widget/Button;
+
+    .line 146
+    .line 147
+    if-eqz v0, :cond_1
+
+    .line 148
+    .line 149
+    const-string v0, "null cannot be cast to non-null type android.widget.Button"
+
+    .line 150
+    .line 151
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/t;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 152
+    .line 153
+    .line 154
+    check-cast p2, Landroid/widget/Button;
+
+    .line 155
+    .line 156
+    invoke-static {p1}, Ls2/n;->e(Ls2/n;)Landroid/content/Context;
+
+    .line 157
+    .line 158
+    .line 159
+    move-result-object p1
+
+    .line 160
+    sget v0, Lcom/excelliance/kxqp/top/R$drawable;->button_add:I
+
+    .line 161
+    .line 162
+    invoke-static {p1, v0}, Lcom/excelliance/kxqp/util/hh;->m(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    .line 163
+    .line 164
+    .line 165
+    move-result-object p1
+
+    .line 166
+    const/4 v0, 0x0
+
+    .line 167
+    invoke-virtual {p2, v0, p1, v0, v0}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    .line 168
+    .line 169
+    .line 170
+    :cond_1
+    :goto_0
+    return-void
+    .line 171
+    .line 172
+    .line 173
+    .line 174
+    .line 175
+    .line 176
+    .line 177
+    .line 178
+    .line 179
+    .line 180
+    .line 181
+    .line 182
+    .line 183
+    .line 184
+    .line 185
+    .line 186
+    .line 187
+    .line 188
+    .line 189
+    .line 190
+    .line 191
+    .line 192
+    .line 193
+    .line 194
+.end method
+
+
+# virtual methods
+.method public final b()Landroid/view/View;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ls2/n$a;->m:Landroid/view/View;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public final c()Landroid/view/View;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ls2/n$a;->n:Landroid/view/View;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public final d()Landroid/view/View;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ls2/n$a;->o:Landroid/view/View;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public final e()Lcom/excelliance/kxqp/ui/view/RecycleImageView;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ls2/n$a;->r:Lcom/excelliance/kxqp/ui/view/RecycleImageView;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public final f()Landroid/view/View;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ls2/n$a;->u:Landroid/view/View;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public final g()Landroid/widget/TextView;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ls2/n$a;->s:Landroid/widget/TextView;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public final h()Landroid/widget/TextView;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ls2/n$a;->p:Landroid/widget/TextView;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public final i()Landroid/widget/TextView;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ls2/n$a;->q:Landroid/widget/TextView;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method

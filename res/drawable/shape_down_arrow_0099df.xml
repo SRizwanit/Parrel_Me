@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate
+            android:fromDegrees="-45.0"
+            android:pivotX="-35.399998%"
+            android:pivotY="14.600002%">
+            <shape
+                android:shape="rectangle">
+                <solid
+                    android:color="#ff0099df" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

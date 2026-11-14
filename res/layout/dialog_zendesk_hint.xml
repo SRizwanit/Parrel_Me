@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/rootView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button
+        android:id="@id/fake_zendesk"
+        android:background="@drawable/btn_zendesk"
+        android:layout_width="56.0dip"
+        android:layout_height="56.0dip"
+        android:layout_marginLeft="40.0dip"
+        android:layout_marginBottom="32.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="#ffffffff"
+        android:gravity="center"
+        android:background="@drawable/bg_dialog_zendesk_hint_text"
+        android:paddingBottom="10.0dip"
+        android:layout_width="130.0dip"
+        android:layout_height="67.0dip"
+        android:layout_marginLeft="48.0dip"
+        android:layout_marginBottom="95.0dip"
+        android:text="@string/dialog_zendesk_hint_toast_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true" />
+    <RelativeLayout
+        android:layout_width="290.0dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:id="@id/ll_dialog"
+            android:background="@drawable/bg_dialog_pay_hint"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="16.0sp"
+                android:textStyle="bold"
+                android:textColor="#ff333333"
+                android:id="@id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19.0dip"
+                android:text="@string/dialog_zendesk_hint_title" />
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="#ff333333"
+                android:paddingLeft="25.0dip"
+                android:paddingRight="25.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18.0dip"
+                android:text="@string/dialog_zendesk_hint_content" />
+            <Button
+                android:textSize="14.0sp"
+                android:textColor="#ffffffff"
+                android:id="@id/btn_got_it"
+                android:background="@drawable/bg_dialog_zendesk_hint_btn"
+                android:layout_width="240.0dip"
+                android:layout_height="34.0dip"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginBottom="14.0dip"
+                android:text="@string/i_know" />
+        </LinearLayout>
+        <ImageView
+            android:id="@id/iv_close"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_marginTop="20.0dip"
+            android:src="@drawable/zendesk_close"
+            android:layout_below="@id/ll_dialog"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

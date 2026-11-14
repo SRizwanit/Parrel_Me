@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/rl_incognito_entry"
+    android:background="@color/incognito_entry_bg"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="36.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/iv_incognito_icon"
+        android:layout_width="14.0dip"
+        android:layout_height="15.0dip"
+        android:src="@drawable/ic_incognito_tools"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6.0dip"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/incognito_text_primary"
+        android:id="@id/tv_incognito_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/incognito_tools_title"
+        android:layout_toRightOf="@id/iv_incognito_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6.0dip"
+        android:layout_toEndOf="@id/iv_incognito_icon" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="12.0dip"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/incognito_text_secondary"
+            android:id="@id/tv_incognito_entry_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/incognito_mode_title" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/incognito_badge"
+            android:id="@id/tv_incognito_new"
+            android:background="@drawable/bg_incognito_new_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/incognito_mode_new_badge"
+            android:layout_marginStart="8.0dip" />
+        <ImageView
+            android:id="@id/iv_incognito_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="12.0dip"
+            android:src="@drawable/item_arrow"
+            android:layout_marginStart="8.0dip"
+            app:tint="@color/incognito_text_secondary" />
+    </LinearLayout>
+</RelativeLayout>

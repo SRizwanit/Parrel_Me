@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@id/margin_t"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/first_start_item_margin_bottom" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/first_main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/first_start_item_height"
+        android:layout_marginLeft="@dimen/first_start_item_margin_edge"
+        android:layout_marginRight="@dimen/first_start_item_margin_edge"
+        android:layout_marginBottom="@dimen/first_start_item_margin_bottom">
+        <LinearLayout
+            android:descendantFocusability="beforeDescendants"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/first_start_item_icon_margin_edge">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@id/app_icon_01"
+                android:layout_width="@dimen/main_app_icon_size"
+                android:layout_height="@dimen/main_app_icon_size"
+                android:contentDescription="@null" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/first_start_item_icon_margin_edge"
+            android:layout_weight="1.0">
+            <TextView
+                android:textSize="@dimen/first_start_item_text_size"
+                android:textColor="@color/add_app_name_text_color"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:id="@id/app_name_01"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginBottom="1.5dip"
+                android:text="App Name"
+                android:singleLine="true"
+                android:layout_weight="1.0" />
+            <TextView
+                android:textSize="@dimen/first_start_item_sub_text_size"
+                android:textColor="@color/add_header_text_color"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:layout_gravity="center|top"
+                android:id="@id/app_desc_01"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginTop="1.5dip"
+                android:text="@string/class_sns_desc"
+                android:singleLine="true"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+        <CheckBox
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/check_box_01"
+            android:layout_width="@dimen/first_start_checkbox_width"
+            android:layout_height="@dimen/first_start_checkbox_width"
+            android:layout_marginLeft="@dimen/folder_dialog_margin_l"
+            android:layout_marginRight="@dimen/first_start_item_icon_margin_edge"
+            android:text=""
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </LinearLayout>
+</LinearLayout>

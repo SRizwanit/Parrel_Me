@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@id/ll_faster"
+        android:background="@color/about_item_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/faster_item_h">
+        <TextView
+            android:textSize="@dimen/about_item_tx"
+            android:textColor="@color/faster_item_tx_c"
+            android:gravity="center_vertical"
+            android:id="@id/tx"
+            android:background="@color/about_item_bg"
+            android:paddingLeft="@dimen/faster_item_margin_l"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.0dip"
+            android:layout_marginBottom="3.0dip"
+            android:text="Trigger area position" />
+        <TextView
+            android:textSize="@dimen/faster_item_tx2"
+            android:textColor="@color/faster_item_tx_c2"
+            android:gravity="center_vertical"
+            android:id="@id/tx2"
+            android:background="@color/about_item_bg"
+            android:paddingLeft="@dimen/faster_item_margin_l"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Bottom left or Bottom right" />
+    </LinearLayout>
+</LinearLayout>

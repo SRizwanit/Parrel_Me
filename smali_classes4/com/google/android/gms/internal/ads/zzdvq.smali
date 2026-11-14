@@ -1,0 +1,48 @@
+.class public interface abstract Lcom/google/android/gms/internal/ads/zzdvq;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@25.2.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzdby;
+
+
+# virtual methods
+.method public abstract zza()Lcom/google/android/gms/internal/ads/zzdvr;
+.end method
+
+.method public abstract zzb(Lcom/google/android/gms/internal/ads/zzfhe;)Lcom/google/android/gms/internal/ads/zzdvq;
+    .param p1    # Lcom/google/android/gms/internal/ads/zzfhe;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract zzc(Lcom/google/android/gms/internal/ads/zzfia;)Lcom/google/android/gms/internal/ads/zzdvq;
+    .param p1    # Lcom/google/android/gms/internal/ads/zzfia;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract zzd(Lcom/google/android/gms/internal/ads/zzdcb;)Lcom/google/android/gms/internal/ads/zzdvq;
+.end method
+
+.method public abstract zze(Lcom/google/android/gms/internal/ads/zzdir;)Lcom/google/android/gms/internal/ads/zzdvq;
+.end method
+
+.method public bridge abstract synthetic zzh()Ljava/lang/Object;
+.end method
+
+.method public bridge abstract synthetic zzi(Lcom/google/android/gms/internal/ads/zzfhe;)Lcom/google/android/gms/internal/ads/zzdby;
+    .param p1    # Lcom/google/android/gms/internal/ads/zzfhe;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+.end method
+
+.method public bridge abstract synthetic zzj(Lcom/google/android/gms/internal/ads/zzfia;)Lcom/google/android/gms/internal/ads/zzdby;
+    .param p1    # Lcom/google/android/gms/internal/ads/zzfia;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+.end method

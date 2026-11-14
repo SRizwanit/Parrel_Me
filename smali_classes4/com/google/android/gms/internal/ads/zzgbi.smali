@@ -1,0 +1,40 @@
+.class public final Lcom/google/android/gms/internal/ads/zzgbi;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@25.2.0"
+
+
+# direct methods
+.method public static final zza(Ljava/util/concurrent/ExecutorService;)Lcom/google/android/gms/internal/ads/zzgbg;
+    .locals 1
+
+    .line 1
+    const-string v0, "executorService"
+
+    .line 2
+    .line 3
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/t;->j(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzgbh;
+
+    .line 7
+    .line 8
+    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/ads/zzgbh;-><init>(Ljava/util/concurrent/ExecutorService;)V
+
+    .line 9
+    .line 10
+    .line 11
+    return-object v0
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+.end method

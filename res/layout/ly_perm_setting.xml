@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/perm_setting_content"
+    android:background="@color/perm_setting_bg_color"
+    android:visibility="visible"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:gravity="center_vertical"
+        android:id="@id/perm_setting_img"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/perm_setting_set_margin_edge"
+        android:layout_marginTop="@dimen/perm_setting_img_margin_top"
+        android:layout_marginRight="@dimen/perm_setting_set_margin_edge" />
+    <TextView
+        android:textSize="@dimen/perm_setting_desc_tx_size"
+        android:textColor="@color/perm_setting_desc_tx_color"
+        android:gravity="center"
+        android:id="@id/tv_perm_setting_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/perm_setting_set_margin_edge"
+        android:layout_marginTop="@dimen/perm_setting_desc_margin_top"
+        android:layout_marginRight="@dimen/perm_setting_set_margin_edge" />
+    <TextView
+        android:textSize="@dimen/perm_setting_set_tx_size"
+        android:textColor="@color/text_color_white"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@id/tv_perm_setting_set"
+        android:background="@color/perm_setting_set_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/perm_setting_set_height"
+        android:layout_marginLeft="@dimen/perm_setting_set_margin_edge"
+        android:layout_marginTop="@dimen/perm_setting_desc_margin_bottom"
+        android:layout_marginRight="@dimen/perm_setting_set_margin_edge"
+        android:text="@string/perm_settings"
+        android:maxLines="2" />
+</LinearLayout>

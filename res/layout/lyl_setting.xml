@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="start"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/setting_linear"
+            android:background="@drawable/menu_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@id/rl_login"
+                style="@style/menu_item1">
+                <ImageView
+                    android:src="@drawable/menu_log_in"
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/tv_login"
+                    android:text="@string/log_in"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/rl_leftmenu_advanced"
+                style="@style/menu_item1">
+                <ImageView
+                    android:src="@drawable/menu_get_vip"
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/leftmenu_advanced"
+                    android:text="@string/setting_get_advanced"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/rl_leftmenu_setting"
+                style="@style/menu_item1">
+                <ImageView
+                    android:src="@drawable/menu_setting"
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/leftmenu_setting"
+                    android:text="@string/setting"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/rl_leftmenu_task"
+                style="@style/menu_item1">
+                <ImageView
+                    android:src="@drawable/menu_task"
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/leftmenu_task_manager"
+                    android:text="@string/task_manager_name"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/rl_leftmenu_notification"
+                style="@style/menu_item1">
+                <ImageView
+                    android:src="@drawable/menu_notification"
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/leftmenu_notification"
+                    android:text="@string/notification_center_title"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/rl_leftmenu_incognito"
+                android:visibility="gone"
+                style="@style/menu_item1">
+                <ImageView
+                    android:src="@drawable/ic_incognito_tools_menu"
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/leftmenu_incognito"
+                    android:text="@string/incognito_tools_title"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/rl_leftmenu_helpcontent"
+                android:visibility="gone"
+                style="@style/menu_item1">
+                <ImageView
+                    android:src="@drawable/menu_feedback"
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/leftmenu_helpcontent"
+                    android:text="@string/helpcontent"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/rl_leftmenu_feedback"
+                style="@style/menu_item1">
+                <ImageView
+                    android:src="@drawable/menu_feedback"
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/leftmenu_feedback"
+                    android:text="@string/feedback"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/rl_leftmenu_encourage"
+                android:visibility="gone"
+                style="@style/menu_item1">
+                <ImageView
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/leftmenu_encourage"
+                    android:text="@string/ic_grade"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/rl_leftmenu_about"
+                style="@style/menu_item1">
+                <ImageView
+                    android:src="@drawable/menu_about"
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/leftmenu_about"
+                    android:text="@string/about"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/rl_leftmenu_like"
+                android:background="@null"
+                style="@style/menu_item1">
+                <ImageView
+                    android:src="@drawable/menu_like_us"
+                    style="@style/menu_icon" />
+                <TextView
+                    android:id="@id/tv_like_us"
+                    android:text="@string/setting_like_us"
+                    style="@style/menu_text_item1" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

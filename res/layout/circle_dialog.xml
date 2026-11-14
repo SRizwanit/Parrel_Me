@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView
+        android:layout_gravity="center"
+        android:id="@id/circle_dialog_gv"
+        android:descendantFocusability="afterDescendants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="10.0dip"
+        android:stretchMode="columnWidth"
+        android:numColumns="4" />
+</LinearLayout>

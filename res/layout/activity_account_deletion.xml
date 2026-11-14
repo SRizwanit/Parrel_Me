@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/user_center_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/title"
+        layout="@layout/layout_title_view" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="#ff666666"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13.0dip"
+        android:text="@string/account_deletion_account"
+        android:layout_marginStart="24.0dip" />
+    <RelativeLayout
+        android:id="@id/rl_head"
+        android:background="@drawable/bg_round_292c444dp"
+        android:paddingTop="14.0dip"
+        android:paddingBottom="14.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip">
+        <ImageView
+            android:id="@id/iv_head"
+            android:layout_width="46.0dip"
+            android:layout_height="46.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="14.0dip"
+            android:src="@drawable/head_login"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16.0dip" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_head"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_head">
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/ll_nickname"
+                android:paddingBottom="3.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginStart="15.0dip">
+                <TextView
+                    android:textSize="18.0sp"
+                    android:textColor="#ffffffff"
+                    android:id="@id/tv_nickname"
+                    android:paddingRight="8.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nickname"
+                    android:paddingEnd="8.0dip" />
+                <ImageView
+                    android:id="@id/iv_vip_sign"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_marginTop="2.0dip"
+                    android:src="@drawable/crown_gold" />
+            </LinearLayout>
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="#ffffffff"
+                android:id="@id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:text="@string/status_no_vip"
+                android:layout_marginStart="15.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="#ff666666"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53.0dip"
+        android:text="@string/account_deletion_sub_hint"
+        android:layout_marginStart="50.0dip"
+        android:layout_marginEnd="50.0dip" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="#ff4e7eea"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/tv_sub_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:text="@string/subscription_manager" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/bg_collect_log_function_text"
+        android:gravity="center"
+        android:id="@id/tv_account_deletion"
+        android:background="@drawable/bg_collect_log_function_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="42.0dip"
+        android:layout_marginTop="30.0dip"
+        android:text="@string/account_deletion_title"
+        android:layout_marginStart="30.0dip"
+        android:layout_marginEnd="30.0dip" />
+</LinearLayout>

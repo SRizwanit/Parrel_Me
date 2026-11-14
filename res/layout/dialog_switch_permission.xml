@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@id/ll_dialog"
+        android:background="@drawable/bg_dialog_pay_hint"
+        android:paddingBottom="16.0dip"
+        android:layout_width="290.0dip"
+        android:layout_height="wrap_content"
+        android:paddingStart="24.5dip"
+        android:paddingEnd="24.5dip">
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="#ff333333"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19.0dip"
+            android:text="@string/dialog_switch_permission_title" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="#ff333333"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18.329987dip"
+            android:text="@string/dialog_switch_permission_content" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/rv_switch_permission"
+            android:background="@drawable/bg_switch_permission_recycle_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:overScrollMode="never" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip">
+            <LinearLayout
+                android:id="@id/ll_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@id/iv_checkbox"
+                    android:padding="5.0dip"
+                    android:layout_width="24.0dip"
+                    android:layout_height="24.0dip"
+                    android:src="@drawable/bg_privacy_right_checkbox" />
+            </LinearLayout>
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="#ff333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="@string/remind_never"
+                android:layout_alignTop="@id/ll_checkbox"
+                android:layout_marginStart="7.0dip"
+                android:layout_toEndOf="@id/ll_checkbox" />
+            <Button
+                android:textSize="14.0sp"
+                android:textColor="#ff666666"
+                android:id="@id/btn_cancel"
+                android:background="@drawable/bg_normal_cancel"
+                android:layout_width="115.0dip"
+                android:layout_height="34.0dip"
+                android:layout_marginTop="16.0dip"
+                android:text="@string/dialog_switch_permission_cancel"
+                android:layout_below="@id/ll_checkbox" />
+            <Button
+                android:textSize="14.0sp"
+                android:textColor="#ffffffff"
+                android:id="@id/btn_start"
+                android:background="@drawable/bg_normal_confirm"
+                android:layout_width="115.0dip"
+                android:layout_height="34.0dip"
+                android:layout_marginTop="16.0dip"
+                android:text="@string/dialog_switch_permission_start"
+                android:layout_below="@id/ll_checkbox"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

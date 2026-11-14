@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@id/rootView"
+    android:background="#ffffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/layout_title_view" />
+    <ImageView
+        android:background="@drawable/icon"
+        android:layout_width="80.0dip"
+        android:layout_height="80.0dip"
+        android:layout_marginTop="70.0dip"
+        android:text="@string/subscription_manager_hint" />
+    <TextView
+        android:textSize="20.0sp"
+        android:textColor="#ff333333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22.0dip"
+        android:text="@string/da_app_name" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="#ff333333"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31.0dip"
+        android:text="@string/google_login_hint_content" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:id="@id/rl_google_login"
+            android:background="@drawable/bg_google_account_switch"
+            android:layout_width="300.0dip"
+            android:layout_height="42.0dip"
+            android:layout_marginBottom="112.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="#ff333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in_with_google"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <Button
+            android:textSize="16.0sp"
+            android:textColor="#ffffffff"
+            android:id="@id/btn_experience_now"
+            android:background="@drawable/bg_google_login_experience_now"
+            android:layout_width="300.0dip"
+            android:layout_height="42.0dip"
+            android:layout_marginBottom="50.0dip"
+            android:text="@string/experience_now"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

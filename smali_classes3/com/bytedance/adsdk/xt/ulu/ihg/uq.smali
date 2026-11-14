@@ -1,0 +1,189 @@
+.class public Lcom/bytedance/adsdk/xt/ulu/ihg/uq;
+.super Lcom/bytedance/adsdk/xt/ulu/ihg/hro;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bytedance/adsdk/xt/ulu/ihg/hro<",
+        "Landroid/graphics/PointF;",
+        "Landroid/graphics/PointF;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/bytedance/adsdk/xt/ztk/ihg<",
+            "Landroid/graphics/PointF;",
+            ">;>;)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/bytedance/adsdk/xt/ulu/ihg/hro;-><init>(Ljava/util/List;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+.end method
+
+
+# virtual methods
+.method public ihg()Lcom/bytedance/adsdk/xt/ihg/xt/ihg;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/bytedance/adsdk/xt/ihg/xt/ihg<",
+            "Landroid/graphics/PointF;",
+            "Landroid/graphics/PointF;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/bytedance/adsdk/xt/ihg/xt/lem;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lcom/bytedance/adsdk/xt/ulu/ihg/hro;->ihg:Ljava/util/List;
+
+    .line 4
+    .line 5
+    invoke-direct {v0, v1}, Lcom/bytedance/adsdk/xt/ihg/xt/lem;-><init>(Ljava/util/List;)V
+
+    .line 6
+    .line 7
+    .line 8
+    return-object v0
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+.end method
+
+.method public bridge synthetic toString()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/bytedance/adsdk/xt/ulu/ihg/hro;->toString()Ljava/lang/String;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+.end method
+
+.method public bridge synthetic ulu()Ljava/util/List;
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/bytedance/adsdk/xt/ulu/ihg/hro;->ulu()Ljava/util/List;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+.end method
+
+.method public bridge synthetic xt()Z
+    .locals 1
+
+    .line 1
+    invoke-super {p0}, Lcom/bytedance/adsdk/xt/ulu/ihg/hro;->xt()Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    return v0
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+.end method

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:id="@id/top_separate_line"
+        android:background="#ffeeeeee"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip" />
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:id="@id/game_item_ll"
+        android:background="@color/memory_task_listview_color"
+        android:layout_width="fill_parent"
+        android:layout_height="70.0dip">
+        <ImageView
+            android:id="@id/task_game_iv"
+            android:layout_width="@dimen/add_list_icon_width"
+            android:layout_height="@dimen/add_list_icon_width"
+            android:layout_marginLeft="@dimen/add_list_padding_edge"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/add_list_padding_edge"
+            android:layout_alignParentStart="true" />
+        <RelativeLayout
+            android:gravity="center"
+            android:id="@id/task_game_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="16.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="16.0dip"
+            android:layout_alignParentEnd="true">
+            <Button
+                android:textSize="14.0sp"
+                android:textColor="#ff364d7f"
+                android:id="@id/task_game_btn"
+                android:background="@drawable/bg_button_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="70.0dip"
+                android:text="@string/task_but_finish"
+                android:elevation="1.0dip" />
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/add_list_name_margin_left"
+            android:layout_marginRight="8.0dip"
+            android:layout_toRightOf="@id/task_game_iv"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/task_game_iv">
+            <TextView
+                android:textSize="@dimen/add_list_name_text_size"
+                android:textColor="@color/tv_name_color"
+                android:ellipsize="end"
+                android:id="@id/task_game_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+            <TextView
+                android:textSize="@dimen/first_start_item_sub_text_size"
+                android:textColor="@color/tv_memory_color"
+                android:ellipsize="end"
+                android:id="@id/task_memory_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sdanfdjksf"
+                android:singleLine="true" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

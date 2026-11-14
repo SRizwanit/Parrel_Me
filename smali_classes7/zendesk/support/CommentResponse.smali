@@ -1,0 +1,543 @@
+.class public Lzendesk/support/CommentResponse;
+.super Ljava/lang/Object;
+.source "CommentResponse.java"
+
+
+# instance fields
+.field private attachments:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lzendesk/support/Attachment;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private authorId:Ljava/lang/Long;
+
+.field private body:Ljava/lang/String;
+
+.field private createdAt:Ljava/util/Date;
+
+.field private htmlBody:Ljava/lang/String;
+
+.field private id:Ljava/lang/Long;
+
+.field private isPublic:Z
+    .annotation runtime Le7/c;
+        value = "public"
+    .end annotation
+.end field
+
+.field private requestId:Ljava/lang/String;
+
+.field private url:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 v0, 0x1
+
+    .line 5
+    iput-boolean v0, p0, Lzendesk/support/CommentResponse;->isPublic:Z
+
+    .line 6
+    .line 7
+    return-void
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+
+# virtual methods
+.method public getAttachments()Ljava/util/List;
+    .locals 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lzendesk/support/Attachment;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lzendesk/support/CommentResponse;->attachments:Ljava/util/List;
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lae/a;->c(Ljava/util/List;)Ljava/util/List;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    return-object v0
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public getAuthorId()Ljava/lang/Long;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lzendesk/support/CommentResponse;->authorId:Ljava/lang/Long;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public getBody()Ljava/lang/String;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lzendesk/support/CommentResponse;->body:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public getCreatedAt()Ljava/util/Date;
+    .locals 3
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lzendesk/support/CommentResponse;->createdAt:Ljava/util/Date;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_0
+
+    .line 4
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    goto :goto_0
+
+    .line 7
+    :cond_0
+    new-instance v0, Ljava/util/Date;
+
+    .line 8
+    .line 9
+    iget-object v1, p0, Lzendesk/support/CommentResponse;->createdAt:Ljava/util/Date;
+
+    .line 10
+    .line 11
+    invoke-virtual {v1}, Ljava/util/Date;->getTime()J
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-wide v1
+
+    .line 15
+    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
+
+    .line 16
+    .line 17
+    .line 18
+    :goto_0
+    return-object v0
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+    .line 38
+    .line 39
+    .line 40
+    .line 41
+    .line 42
+    .line 43
+    .line 44
+    .line 45
+    .line 46
+    .line 47
+    .line 48
+    .line 49
+    .line 50
+    .line 51
+    .line 52
+    .line 53
+    .line 54
+    .line 55
+    .line 56
+    .line 57
+    .line 58
+    .line 59
+    .line 60
+    .line 61
+.end method
+
+.method public getHtmlBody()Ljava/lang/String;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lzendesk/support/CommentResponse;->htmlBody:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public getId()Ljava/lang/Long;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lzendesk/support/CommentResponse;->id:Ljava/lang/Long;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public getRequestId()Ljava/lang/String;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lzendesk/support/CommentResponse;->requestId:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public getUrl()Ljava/lang/String;
+    .locals 1
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lzendesk/support/CommentResponse;->url:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    return-object v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public isPublic()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lzendesk/support/CommentResponse;->isPublic:Z
+
+    .line 2
+    .line 3
+    return v0
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method
+
+.method public setAttachments(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lzendesk/support/Attachment;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lzendesk/support/CommentResponse;->attachments:Ljava/util/List;
+
+    .line 2
+    .line 3
+    return-void
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+.end method
+
+.method public setAuthorId(Ljava/lang/Long;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lzendesk/support/CommentResponse;->authorId:Ljava/lang/Long;
+
+    .line 2
+    .line 3
+    return-void
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+.end method
+
+.method public setBody(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lzendesk/support/CommentResponse;->body:Ljava/lang/String;
+
+    .line 2
+    .line 3
+    return-void
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+.end method
+
+.method public setCreatedAt(Ljava/util/Date;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lzendesk/support/CommentResponse;->createdAt:Ljava/util/Date;
+
+    .line 2
+    .line 3
+    return-void
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+.end method
+
+.method public setId(Ljava/lang/Long;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lzendesk/support/CommentResponse;->id:Ljava/lang/Long;
+
+    .line 2
+    .line 3
+    return-void
+    .line 4
+    .line 5
+    .line 6
+    .line 7
+    .line 8
+    .line 9
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+.end method

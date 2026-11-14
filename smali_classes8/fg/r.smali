@@ -1,0 +1,122 @@
+.class public final Lfg/r;
+.super Lfg/h;
+.source "ReflectJavaAnnotationArguments.kt"
+
+# interfaces
+.implements Lpg/h;
+
+
+# instance fields
+.field private final c:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lyg/f;Ljava/lang/Class;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lyg/f;",
+            "Ljava/lang/Class<",
+            "*>;)V"
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "klass"
+
+    .line 2
+    .line 3
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/t;->j(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    const/4 v0, 0x0
+
+    .line 7
+    invoke-direct {p0, p1, v0}, Lfg/h;-><init>(Lyg/f;Lkotlin/jvm/internal/k;)V
+
+    .line 8
+    .line 9
+    .line 10
+    iput-object p2, p0, Lfg/r;->c:Ljava/lang/Class;
+
+    .line 11
+    .line 12
+    return-void
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+    .line 17
+    .line 18
+    .line 19
+    .line 20
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+    .line 33
+    .line 34
+    .line 35
+    .line 36
+    .line 37
+    .line 38
+    .line 39
+    .line 40
+    .line 41
+    .line 42
+    .line 43
+    .line 44
+    .line 45
+    .line 46
+    .line 47
+.end method
+
+
+# virtual methods
+.method public c()Lpg/x;
+    .locals 2
+
+    .line 1
+    sget-object v0, Lfg/e0;->a:Lfg/e0$a;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lfg/r;->c:Ljava/lang/Class;
+
+    .line 4
+    .line 5
+    invoke-virtual {v0, v1}, Lfg/e0$a;->a(Ljava/lang/reflect/Type;)Lfg/e0;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    return-object v0
+    .line 10
+    .line 11
+    .line 12
+    .line 13
+    .line 14
+    .line 15
+    .line 16
+.end method

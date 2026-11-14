@@ -1,0 +1,13 @@
+.class public interface abstract Lcom/secmtp/sdk/core/common/ny/mw/mm/my;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/secmtp/sdk/core/common/ny/mw/mm/mu;
+
+
+# virtual methods
+.method public abstract handleFullScreenClick(Landroid/view/View;)V
+.end method
+
+.method public abstract registerNativeAdContainer(Landroid/view/View;)V
+.end method

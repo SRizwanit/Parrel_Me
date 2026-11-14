@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="53.0dip"
+        android:layout_height="56.0dip"
+        android:layout_marginTop="15.0dip">
+        <ImageView
+            android:id="@id/item_app_icon"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginTop="3.0dip"
+            android:contentDescription="@null" />
+        <ImageView
+            android:layout_gravity="bottom|center|right"
+            android:id="@id/app_new_icon"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null" />
+        <ImageView
+            android:layout_gravity="center|right|top"
+            android:id="@id/delete_markView"
+            android:visibility="gone"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:contentDescription="@null" />
+    </FrameLayout>
+    <TextView
+        android:textSize="11.0sp"
+        android:textColor="@color/game_box_main_text_color"
+        android:ellipsize="marquee"
+        android:gravity="bottom"
+        android:layout_gravity="center_horizontal"
+        android:id="@id/item_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="25.0dip"
+        android:layout_marginLeft="4.0dip"
+        android:layout_marginRight="4.0dip"
+        android:singleLine="true" />
+</LinearLayout>

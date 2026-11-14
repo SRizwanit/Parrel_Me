@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/feedback_bg"
+    android:descendantFocusability="beforeDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/add_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/add_title_height">
+        <ImageButton
+            android:id="@id/ib_back"
+            android:background="@android:color/transparent"
+            android:paddingLeft="@dimen/add_back_padding_left"
+            android:paddingRight="@dimen/add_back_padding_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:textSize="@dimen/add_list_title_text_size"
+            android:textColor="@color/text_color_white"
+            android:id="@id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ic_grade" />
+    </LinearLayout>
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@id/iv_banner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY" />
+            <TextView
+                android:textSize="@dimen/grade_content_tx"
+                android:textColor="@color/grade_content_tx_bg"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:id="@id/tx_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/grad_content1_mt"
+                android:layout_marginBottom="@dimen/grad_content1_mb"
+                android:text="@string/grade_content3" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/grade_cancel1_tx_c"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/transparent"
+                android:visibility="visible"
+                android:layout_width="193.0dip"
+                android:layout_height="36.0dip"
+                android:text="@string/grade_feedback"
+                android:textAlignment="center" />
+            <Button
+                android:textSize="@dimen/grade_sure1_tx"
+                android:textColor="@color/grade_sure1_tx_c"
+                android:id="@id/bt_sure"
+                android:background="@drawable/user_button_bg_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/grad_sure1_h"
+                android:layout_marginLeft="@dimen/grad_sure1_mlr"
+                android:layout_marginTop="@dimen/grad_sure1_mt"
+                android:layout_marginRight="@dimen/grad_sure1_mlr"
+                android:layout_marginBottom="@dimen/grad_sure1_mb"
+                android:text="@string/grade_sure3" />
+            <Button
+                android:textSize="@dimen/grade_sure1_tx"
+                android:textColor="@color/grade_cancel1_tx_c"
+                android:id="@id/bt_cance"
+                android:background="@color/grade_cancel1_tx_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/grad_sure1_h"
+                android:layout_marginLeft="@dimen/grad_sure1_mlr"
+                android:layout_marginRight="@dimen/grad_sure1_mlr"
+                android:layout_marginBottom="50.0dip"
+                android:text="@string/grade_cancel3" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

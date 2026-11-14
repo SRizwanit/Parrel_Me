@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="@color/feedback_item_bg" />
+    <stroke
+        android:width="@dimen/feedback_item_boder"
+        android:color="@color/feedback_item_stroke_c" />
+    <padding
+        android:left="@dimen/feedback_content_padding"
+        android:top="@dimen/feedback_content_padding"
+        android:right="@dimen/feedback_content_padding"
+        android:bottom="@dimen/feedback_content_padding" />
+</shape>

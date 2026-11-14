@@ -1,0 +1,10 @@
+.class public interface abstract Lcom/secmtp/sdk/core/common/nu/mm;
+.super Ljava/lang/Object;
+
+
+# virtual methods
+.method public abstract mm()V
+.end method
+
+.method public abstract mn()V
+.end method
