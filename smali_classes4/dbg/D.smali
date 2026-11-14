@@ -4,32 +4,39 @@
 
 .field private static a:Z
 
-# log: Logcat + dbg.txt + Toast
+
+# entry point used from kk$c: log now, and show an AlertDialog if we have
+# a usable (non-finishing) Activity context; otherwise queue it for later.
 .method public static w(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 3
+    .locals 2
 
     :try_start_0
-    new-instance v0, Ljava/lang/Throwable;
+    const-string v0, "DBG"
 
-    invoke-direct {v0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v1, "DBG"
+    instance-of v0, p0, Landroid/app/Activity;
 
-    invoke-static {v1, p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    if-eqz v0, :cond_0
 
-    invoke-static {v0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+    move-object v1, p0
 
-    move-result-object v0
+    check-cast v1, Landroid/app/Activity;
 
-    invoke-static {p0, v0}, Ldbg/D;->f(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {v1}, Landroid/app/Activity;->isFinishing()Z
 
-    const/4 v1, 0x1
+    move-result v0
 
-    invoke-static {p0, p1, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    if-nez v0, :cond_0
 
-    move-result-object v1
+    invoke-static {v1, p1}, Ldbg/D;->show(Landroid/app/Activity;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Landroid/widget/Toast;->show()V
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p0, p1}, Ldbg/D;->save(Landroid/content/Context;Ljava/lang/String;)V
+
+    :goto_0
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -37,39 +44,77 @@
     return-void
 .end method
 
-# append text to <externalFilesDir>/dbg.txt
-.method public static f(Landroid/content/Context;Ljava/lang/String;)V
+
+# shows a plain system AlertDialog with the given message
+.method private static show(Landroid/app/Activity;Ljava/lang/String;)V
+    .locals 2
+
+    :try_start_0
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const-string v1, "Debug Info"
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const-string v1, "OK"
+
+    const/4 p0, 0x0
+
+    invoke-virtual {v0, v1, p0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-void
+.end method
+
+
+# appends text (with a timestamp) into a pending SharedPreferences string,
+# to be shown later as a dialog once an Activity is available (see
+# showIfPending below).
+.method private static save(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
 
     :try_start_0
-    const/4 v0, 0x0
+    const-string v0, "dbg_prefs"
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
+    const/4 v1, 0x0
 
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    :cond_0
-    new-instance v1, Ljava/io/File;
+    const-string v1, "pending"
 
-    const-string v2, "dbg.txt"
+    const-string v2, ""
 
-    invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    new-instance v0, Ljava/io/FileWriter;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Ljava/io/FileWriter;-><init>(Ljava/io/File;Z)V
+    move-result-object v2
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     new-instance v2, Ljava/util/Date;
 
@@ -91,9 +136,17 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+    move-result-object v0
+
+    const-string v2, "pending"
+
+    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -101,7 +154,64 @@
     return-void
 .end method
 
-# install: crash logger + "why did the process die last time"
+
+# call this from an Activity's onResume(); if there's a saved pending
+# report (a crash, or a previous exit reason), shows it as a dialog and
+# clears it.
+.method public static showIfPending(Landroid/content/Context;)V
+    .locals 4
+
+    :try_start_0
+    const-string v0, "dbg_prefs"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "pending"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-lez v3, :cond_0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v3
+
+    invoke-interface {v3, v1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    instance-of v3, p0, Landroid/app/Activity;
+
+    if-eqz v3, :cond_0
+
+    check-cast p0, Landroid/app/Activity;
+
+    invoke-static {p0, v2}, Ldbg/D;->show(Landroid/app/Activity;Ljava/lang/String;)V
+
+    :cond_0
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-void
+.end method
+
+
+# install: crash logger + check why the previous process died
 .method public static i(Landroid/content/Context;)V
     .locals 2
 
@@ -144,8 +254,10 @@
     return-void
 .end method
 
+
 # Android 11+: why did the previous process die?
-# reason: 1=EXIT_SELF(app called finish/exit/kill itself) 2=SIGNALED 3=LOW_MEMORY 4=CRASH(java) 5=CRASH_NATIVE 6=ANR 10=USER_REQUESTED
+# reason: 1=EXIT_SELF 2=SIGNALED 3=LOW_MEMORY 4=CRASH(java) 5=CRASH_NATIVE
+#         6=ANR 10=USER_REQUESTED
 .method private static r(Landroid/content/Context;)V
     .locals 6
 
@@ -239,7 +351,7 @@
 
     move-result-object v2
 
-    invoke-static {p0, v2}, Ldbg/D;->f(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v2}, Ldbg/D;->save(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
     :try_end_0

@@ -36,7 +36,7 @@
 
     iget-object v1, p0, Ldbg/D$h;->a:Landroid/content/Context;
 
-    invoke-static {v1, v0}, Ldbg/D;->f(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Ldbg/D;->save(Landroid/content/Context;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
