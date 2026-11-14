@@ -206,6 +206,8 @@
     .line 6
     invoke-super {p0, p1}, Landroidx/multidex/MultiDexApplication;->attachBaseContext(Landroid/content/Context;)V
 
+    invoke-static {p0}, Ldbg/D;->i(Landroid/content/Context;)V
+
     .line 7
     .line 8
     .line 9
