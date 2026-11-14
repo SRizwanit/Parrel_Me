@@ -46,7 +46,7 @@
 
 
 # shows a plain system AlertDialog with the given message
-.method private static show(Landroid/app/Activity;Ljava/lang/String;)V
+.method static show(Landroid/app/Activity;Ljava/lang/String;)V
     .locals 2
 
     :try_start_0
@@ -90,7 +90,7 @@
 # appends text (with a timestamp) into a pending SharedPreferences string,
 # to be shown later as a dialog once an Activity is available (see
 # showIfPending below).
-.method private static save(Landroid/content/Context;Ljava/lang/String;)V
+.method static save(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
 
     :try_start_0
