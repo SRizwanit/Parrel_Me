@@ -1,0 +1,199 @@
+# Path: .github/workflows/build.yml
+name: Recompile & Sign APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Cache Apktool
+        id: apktool-cache
+        uses: actions/cache@v4
+        with:
+          path: apktool.jar
+          key: apktool-jar-v3.0.3
+
+      - name: Download latest Apktool
+        if: steps.apktool-cache.outputs.cache-hit != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APKTOOL_TAG: v3.0.3
+        run: |
+          # repo-তে apktool.jar commit করা থাকলে ডাউনলোড লাগবে না
+          if [ -s apktool.jar ]; then
+            echo "apktool.jar আগে থেকেই আছে, ডাউনলোড বাদ"
+            java -jar apktool.jar --version
+            exit 0
+          fi
+
+          TAG="$APKTOOL_TAG"
+          VER="${TAG#v}"
+          echo "Apktool: $TAG"
+          ok=0
+
+          # পদ্ধতি ১: gh CLI (API পথে, token সহ)
+          for i in 1 2 3 4 5; do
+            if gh release download "$TAG" -R iBotPeaches/Apktool -p "apktool_${VER}.jar" -O apktool.jar --clobber; then
+              ok=1; break
+            fi
+            echo "gh চেষ্টা $i ব্যর্থ, অপেক্ষা করছি..."
+            sleep $((i * 15))
+          done
+
+          # পদ্ধতি ২: curl (লম্বা বিরতিতে রিট্রাই)
+          if [ "$ok" -ne 1 ]; then
+            for i in 1 2 3 4; do
+              if curl -fsSL --retry 3 --retry-delay 10 --retry-all-errors \
+                -o apktool.jar \
+                "https://github.com/iBotPeaches/Apktool/releases/download/${TAG}/apktool_${VER}.jar"; then
+                ok=1; break
+              fi
+              echo "curl চেষ্টা $i ব্যর্থ, অপেক্ষা করছি..."
+              sleep $((i * 20))
+            done
+          fi
+
+          [ "$ok" -eq 1 ] || { echo "Apktool ডাউনলোড করা যায়নি"; exit 1; }
+          java -jar apktool.jar --version
+
+      - name: Locate project & convert apktool.json -> apktool.yml
+        run: |
+          # apktool.json (Apktool M) যেখানে আছে সেটাই project root
+          CFG=$(find . -maxdepth 3 -name apktool.json -not -path "./.git/*" | head -n1)
+          if [ -z "$CFG" ]; then
+            # apktool.yml থাকলে সরাসরি সেটা ব্যবহার হবে
+            CFG=$(find . -maxdepth 3 -name apktool.yml -not -path "./.git/*" | head -n1)
+            [ -z "$CFG" ] && { echo "apktool.json / apktool.yml পাওয়া যায়নি"; exit 1; }
+            echo "PROJECT_DIR=$(dirname "$CFG")" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          PROJECT_DIR=$(dirname "$CFG")
+          echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
+
+          echo "---- apktool.json (প্রথম 3000 অক্ষর) ----"
+          head -c 3000 "$PROJECT_DIR/apktool.json"; echo
+          echo "------------------------------------------"
+
+          APKTOOL_VER=$(java -jar apktool.jar --version | tr -d '\r')
+          python3 - "$PROJECT_DIR" "$APKTOOL_VER" <<'PY'
+          import json, sys, os
+
+          pd, ver = sys.argv[1], sys.argv[2]
+          d = json.load(open(os.path.join(pd, "apktool.json"))) or {}
+
+          def dct(x):
+              return x if isinstance(x, dict) else {}
+
+          def lst(x):
+              return x if isinstance(x, list) else []
+
+          def pick(src, *keys, default=None):
+              # প্রথম যে key-র মান None নয় সেটা নেয়
+              for k in keys:
+                  if isinstance(src, dict) and src.get(k) is not None:
+                      return src[k]
+              return default
+
+          def b(x):
+              if isinstance(x, str):
+                  return x.strip().lower() == "true"
+              return str(bool(x)).lower() == "true"
+
+          s   = dct(d.get("sdkInfo"))
+          v   = dct(pick(d, "versionInfo", "VersionInfo", default={}))
+          pkg = dct(d.get("packageInfo"))
+          uf  = dct(d.get("usesFramework"))
+
+          fw_ids = lst(uf.get("ids")) or [1]
+          fw_tag = uf.get("tag")
+
+          o = []
+          o.append("version: " + ver)
+          o.append("apkFileName: " + str(pick(d, "apkFileName", default="app.apk")))
+          o.append("isFrameworkApk: " + str(b(pick(d, "isFrameworkApk", default=False))).lower())
+
+          o.append("usesFramework:")
+          o.append("  ids:")
+          o += ["  - " + str(i) for i in fw_ids]
+          if fw_tag:
+              o.append("  tag: " + str(fw_tag))
+
+          o.append("packageInfo:")
+          o.append("  forcedPackageId: " + str(pick(pkg, "forcedPackageId", default=127)))
+          rmp = pkg.get("renameManifestPackage")
+          if rmp:
+              o.append("  renameManifestPackage: " + str(rmp))
+
+          o.append("sdkInfo:")
+          o.append("  minSdkVersion: " + str(pick(s, "minSdkVersion", default=21)))
+          o.append("  targetSdkVersion: " + str(pick(s, "targetSdkVersion", default=34)))
+          if s.get("maxSdkVersion") is not None:
+              o.append("  maxSdkVersion: " + str(s["maxSdkVersion"]))
+
+          o.append("versionInfo:")
+          o.append("  versionCode: " + str(pick(v, "versionCode", default=1)))
+          o.append("  versionName: " + str(pick(v, "versionName", default="1.0")))
+
+          o.append("resourcesAreCompressed: " + str(b(pick(d, "resourcesAreCompressed", default=False))).lower())
+          o.append("sharedLibrary: " + str(b(pick(d, "sharedLibrary", default=False))).lower())
+          o.append("sparseResources: " + str(b(pick(d, "sparseResources", default=False))).lower())
+
+          dnc = lst(d.get("doNotCompress"))
+          o.append("doNotCompress:")
+          o += ["- " + str(x) for x in dnc]
+
+          unk = dct(d.get("unknownFiles"))
+          o.append("unknownFiles:")
+          o += ["  %s: %s" % (k, x) for k, x in unk.items()]
+
+          open(os.path.join(pd, "apktool.yml"), "w").write("\n".join(o) + "\n")
+          print("---- generated apktool.yml ----")
+          print("\n".join(o))
+          PY
+
+      - name: Recompile
+        run: |
+          java -jar apktool.jar b "$PROJECT_DIR" -o unsigned.apk
+
+      - name: Zipalign + Sign (default debug key)
+        run: |
+          BT="$ANDROID_HOME/build-tools/$(ls "$ANDROID_HOME/build-tools" | sort -V | tail -n1)"
+          echo "Build-tools: $BT"
+
+          # Default debug keystore
+          keytool -genkeypair -v \
+            -keystore debug.keystore \
+            -alias androiddebugkey \
+            -storepass android -keypass android \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US"
+
+          "$BT/zipalign" -f -p 4 unsigned.apk aligned.apk
+
+          "$BT/apksigner" sign \
+            --ks debug.keystore \
+            --ks-key-alias androiddebugkey \
+            --ks-pass pass:android \
+            --key-pass pass:android \
+            --out recompiled-signed.apk \
+            aligned.apk
+
+          "$BT/apksigner" verify --verbose recompiled-signed.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: recompiled-signed-apk
+          path: recompiled-signed.apk
