@@ -2609,6 +2609,8 @@
     .line 1
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
+    invoke-static {p0}, Ldbg/D;->showIfPending(Landroid/content/Context;)V
+
     .line 2
     .line 3
     .line 4
