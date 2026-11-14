@@ -206,14 +206,6 @@
     .line 6
     invoke-super {p0, p1}, Landroidx/multidex/MultiDexApplication;->attachBaseContext(Landroid/content/Context;)V
 
-    invoke-static {p0}, Ldbg/D;->i(Landroid/content/Context;)V
-
-    new-instance v0, Ldbg/D$L;
-
-    invoke-direct {v0}, Ldbg/D$L;-><init>()V
-
-    invoke-virtual {p0, v0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
     .line 7
     .line 8
     .line 9
